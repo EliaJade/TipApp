@@ -29,7 +29,7 @@
                 android:layout_height="140dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                tools:src= "@drawable/account_ic"/>
+                app:icon= "@drawable/account_ic" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -43,10 +43,9 @@
                 android:id="@+id/usernameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Username"
+                android:hint="Username"
                 android:layout_gravity="center"
-                android:textSize="15sp"
-                android:textColor="@color/editText"/>
+                android:textSize="15sp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -63,9 +62,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Password"
-                android:textSize="15sp"
-                android:textColor="@color/editText"/>
+                android:hint="Password"
+                android:textSize="15sp"/>
 
             <TextView
                 android:id="@+id/forgotPasswordViewText"
