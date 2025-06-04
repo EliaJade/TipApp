@@ -37,6 +37,11 @@ android {
 
 dependencies {
 
+    implementation(libs.firebase.ui.auth)
+
+    // Required only if Facebook login support is required
+    // Find the latest Facebook SDK releases here: https://goo.gl/Ce5L94
+    implementation(libs.facebook.android.sdk)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

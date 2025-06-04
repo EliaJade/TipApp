@@ -2,4 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    //Text
+    <color name="editText">#BCBCBC</color>
+    <color name="forgotPasswordText">#2196F3</color>
+    <color name="signUpTextBlue">#2196F3</color>
+    <color name="signUpTextRed">#F32121</color>
+    <color name="signUpTextGrey">#565656</color>
+
+    //Button
+    <color name="buttonSignIn">#2196F3</color>
+    <color name="buttonSignUpBlue">#C3E4FF</color>
+    <color name="buttonSignUpRed">#FFC3C3</color>
+    <color name="buttonSignUpGrey">#DBDBDB</color>
 </resources>
