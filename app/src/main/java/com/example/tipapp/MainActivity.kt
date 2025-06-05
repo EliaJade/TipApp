@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tipapp.databinding.ActivityMainBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.BuildConfig
@@ -24,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     lateinit var binding: ActivityMainBinding
-    //private lateinit var: googleSignInClient: GoogleSignInClient
+    private lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         //SET UP CLICK LISTENERS
         binding.signUpButton.setOnClickListener { signUp() }
         binding.signInButton.setOnClickListener { signIn() }
-        binding.signUpGoogleButton.setOnClickListener { signInGoogle() }
+        //binding.signUpGoogleButton.setOnClickListener { signInGoogle() }
 
 
         //configureFirebaseServices()
@@ -95,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }*/
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == RC_SIGN_IN) {
@@ -115,7 +117,7 @@ class MainActivity : AppCompatActivity() {
                 showAlert("Google Sign-In", e.localizedMessage ?: "Unknown error")
             }
         }
-    }
+    }*/
 
     private fun goToHome() {
         val intent = Intent(this, HomeActivity::class.java)
