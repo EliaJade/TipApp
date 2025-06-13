@@ -61,6 +61,25 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        public override fun onStart() {
+            super.onStart()
+            // Check if user is signed in (non-null) and update UI accordingly.
+            val currentUser = auth.currentUser
+            if (currentUser != null) {
+                reload()
+            }
+        }
+
+        fun checkCurrentUser() {
+            // [START check_current_user]
+            val user = Firebase.auth.currentUser
+            if (user != null) {
+                // User is signed in
+            } else {
+                // No user is signed in
+            }
+            // [END check_current_user]
+        }
 
         supportActionBar?.title = "Sign In"
     }
